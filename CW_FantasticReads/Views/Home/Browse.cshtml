@@ -1,0 +1,28 @@
+﻿@using CW_FantasticReads.Models
+@model List<SearchViewModel>
+
+@{
+	ViewBag.Title = "Browse";
+}
+
+
+<table class="table table-striped">
+	<thead>
+		<tr>
+			<th>Image</th>
+			<th>Name</th>
+		</tr>
+	</thead>
+	@foreach (SearchViewModel book in Model)
+	{
+		<tr>
+			<td>
+				<a href="~/Book/Details/@book.BookID">
+					<img src="@Url.Content(book.ImageURL)" width="200" alt="Image for @book.BookName" />
+				</a>
+			</td>
+			<td>@book.BookName</td>
+		</tr>
+	}
+</table>
+

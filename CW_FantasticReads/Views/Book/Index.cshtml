@@ -1,0 +1,55 @@
+﻿@using CW_FantasticReads.Models
+@model List<BookViewModel>
+@{
+	ViewBag.Title = "Books";
+}
+
+<h2>Books</h2>
+@{
+	if (string.IsNullOrEmpty(ViewBag.ErrorMessage) == false)
+	{
+		<div>@ViewBag.ErrorMessage</div>
+	}
+	if (string.IsNullOrEmpty(ViewBag.Message) == false)
+	{
+		<div>@ViewBag.Message</div>
+	}
+}
+		<div class="table-actions">
+			@Html.ActionLink("Add New Book", "Create", "Book", null, new { @class = "btn btn-primary btn-sm" })
+		</div>
+		<table class="table table-striped">
+			<thead>
+				<tr>
+					<th>ID:</th>
+					<th>Name:</th>
+					<th>Author:</th>
+					<th>Genre:</th>
+					<th>Series:</th>
+					<th>Price:</th>
+					<th>Pages:</th>
+				</tr>
+			</thead>
+			@foreach (BookViewModel book in Model)
+			{
+			<tr>
+				<td class="cell-small">@book.ID</td>
+				<td>@book.Name</td>
+				<td>@book.Author.Name</td>
+				<td>@book.Genre.Name</td>
+				<td>@book.Series.Name</td>
+				<td>@book.Price</td>
+				<td>@book.Pages</td>
+				
+				<td class="cell-small"> 
+					@Html.ActionLink("Details", "Details", "Book", new { id = book.ID }, new { @class = "btn btn-primary btn-sm" })
+				</td>
+				<td class="cell-small">
+					@Html.ActionLink("Edit", "Edit", "Book", new { id = book.ID }, new { @class = "btn btn-primary btn-sm" })
+				</td>
+				<td class="cell-small">
+					@Html.ActionLink("Delete", "Delete", "Book", new { id = book.ID }, new { @class = "btn btn-primary btn-sm" })
+				</td>
+			</tr>			
+			}
+		</table>

@@ -1,0 +1,15 @@
+B:\University\YEAR 1\SEMESTER 2\Courseworks\Уеб програмиране с ASP.NET\CW_FantasticReads\Repositories\bin\Debug\Repositories.dll.config
+B:\University\YEAR 1\SEMESTER 2\Courseworks\Уеб програмиране с ASP.NET\CW_FantasticReads\Repositories\bin\Debug\Repositories.dll
+B:\University\YEAR 1\SEMESTER 2\Courseworks\Уеб програмиране с ASP.NET\CW_FantasticReads\Repositories\bin\Debug\Repositories.pdb
+B:\University\YEAR 1\SEMESTER 2\Courseworks\Уеб програмиране с ASP.NET\CW_FantasticReads\Repositories\bin\Debug\DataAccess.dll
+B:\University\YEAR 1\SEMESTER 2\Courseworks\Уеб програмиране с ASP.NET\CW_FantasticReads\Repositories\bin\Debug\EntityFramework.dll
+B:\University\YEAR 1\SEMESTER 2\Courseworks\Уеб програмиране с ASP.NET\CW_FantasticReads\Repositories\bin\Debug\EntityFramework.SqlServer.dll
+B:\University\YEAR 1\SEMESTER 2\Courseworks\Уеб програмиране с ASP.NET\CW_FantasticReads\Repositories\bin\Debug\DataAccess.pdb
+B:\University\YEAR 1\SEMESTER 2\Courseworks\Уеб програмиране с ASP.NET\CW_FantasticReads\Repositories\bin\Debug\DataAccess.dll.config
+B:\University\YEAR 1\SEMESTER 2\Courseworks\Уеб програмиране с ASP.NET\CW_FantasticReads\Repositories\bin\Debug\EntityFramework.xml
+B:\University\YEAR 1\SEMESTER 2\Courseworks\Уеб програмиране с ASP.NET\CW_FantasticReads\Repositories\bin\Debug\EntityFramework.SqlServer.xml
+B:\University\YEAR 1\SEMESTER 2\Courseworks\Уеб програмиране с ASP.NET\CW_FantasticReads\Repositories\obj\Debug\Repositories.csprojAssemblyReference.cache
+B:\University\YEAR 1\SEMESTER 2\Courseworks\Уеб програмиране с ASP.NET\CW_FantasticReads\Repositories\obj\Debug\Repositories.csproj.CoreCompileInputs.cache
+B:\University\YEAR 1\SEMESTER 2\Courseworks\Уеб програмиране с ASP.NET\CW_FantasticReads\Repositories\obj\Debug\Repositories.csproj.CopyComplete
+B:\University\YEAR 1\SEMESTER 2\Courseworks\Уеб програмиране с ASP.NET\CW_FantasticReads\Repositories\obj\Debug\Repositories.dll
+B:\University\YEAR 1\SEMESTER 2\Courseworks\Уеб програмиране с ASP.NET\CW_FantasticReads\Repositories\obj\Debug\Repositories.pdb

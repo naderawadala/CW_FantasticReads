@@ -1,0 +1,37 @@
+1. SQL, connections are properly made with connection strings in the .config files.
+- DataModel
+- Backup values for the SQL is in the project 'FantasticReadsDB'
+
+2. Repositories
+- BaseRepository with interface that is inherited by all repositories
+- BookRepository has additional:
+	- GetRecent which does:
+		- orders the books in a descending order by the time they were added
+		- and takes in an integer as a parameter for the amount of books to sort
+		- this is to prevent 1000 books being listed in the index
+	- GetByAuthor
+		-self explanatory, is this even used?
+- UserRepository has additional:
+	- RegisterUser which does:
+		- takes in a User and a password string as a parameter
+		- uses PasswordManager to turn the password into hash and salt and store it in the DB
+	- GetByNameAndPassword which takes username and pw strings as parameters
+		-uses the pw manager custom method IsPasswordMatch to check if the 
+		-user and password match in the database
+	- GetByName which:
+		-takes in a username string and compares it to existing usernames
+		
+3. Controllers
+- Author, Series and Genre have the same CRUD operations with the respective ViewModels and validation
+- Home has
+			-Browse, which serves as a searchbar and takes out a result of the matching string in the parameter
+				-browse has CustomAuthenticated, which is a custom attribute that allows registered users only
+			-AccessDenied, which basically tells the user that they have no access to the page if they try to be smart
+- User has 
+			-Register and Login with their validations
+			-Delete and List for admins, through CustomAuthorize. Admins can't delete admins. Admins are set from the SQL DB
+			
+- LoginSession records the information of the currently logged in user
+
+4. Views & other
+- _Shared uses LoginSession to determine which parts of the site are accessible to guests, users and admins		

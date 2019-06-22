@@ -1,0 +1,39 @@
+﻿@using CW_FantasticReads.Models
+@model List<SeriesViewModel>
+@{
+	ViewBag.Title = "Index";
+}
+@{
+	if (string.IsNullOrEmpty(ViewBag.ErrorMessage) == false)
+	{
+		<div>@ViewBag.ErrorMessage</div>
+	}
+	if (string.IsNullOrEmpty(ViewBag.Message) == false)
+	{
+		<div>@ViewBag.Message</div>
+	}
+}
+<div class="table-actions">
+	@Html.ActionLink("Add New Series","Create","Series",null, new { @class="btn btn-primary btn-sm"})
+</div>
+<table class="table table-striped">
+	<thead>
+		<tr>
+			<th>ID:</th>
+			<th>Name:</th>
+		</tr>
+	</thead>
+	@foreach (SeriesViewModel series in Model)
+	{
+		<tr>
+			<td class="cell-small">@series.ID</td>
+			<td>@series.Name</td>
+			<td class="cell-small">
+				@Html.ActionLink("Edit", "Edit", "Series", new { id = series.ID }, new { @class = "btn btn-primary btn-sm}" })
+			</td>
+			<td class="cell-small">
+				@Html.ActionLink("Delete", "Delete", "Series", new { id = series.ID }, new { @class = "btn btn-primary btn-sm}" })
+			</td>
+		</tr>
+	}
+</table>

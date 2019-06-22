@@ -1,0 +1,41 @@
+﻿@using CW_FantasticReads.Models
+@model List<AuthorViewModel>
+@{
+	ViewBag.Title = "Authors";
+	
+}
+@{
+	if (string.IsNullOrEmpty(ViewBag.ErrorMessage) == false)
+	{
+		<div>@ViewBag.ErrorMessage</div>
+	}
+	if (string.IsNullOrEmpty(ViewBag.Message) == false)
+	{
+		<div>@ViewBag.Message</div>
+	}
+}
+<div class="table-actions">
+	@Html.ActionLink("Add New Author", "Create", "Author", null, new { @class = "btn btn-primary btn-sm" })
+</div>
+<table class="table table-striped">
+		<thead>
+			<tr>
+				<th>ID:</th>
+				<th>Name:</th>
+			</tr>
+		</thead>
+		@foreach (AuthorViewModel author in Model)
+		{
+
+			<tr>
+				<td class="cell-small">@author.ID</td>
+				<td>@author.Name</td>
+				<td class="cell-small">
+					@Html.ActionLink("Edit", "Edit", "Author", new { id = author.ID }, new { @class = "btn btn-primary btn-sm" })
+				</td>
+				<td class="cell-small">
+					@Html.ActionLink("Delete", "Delete", "Author", new { id = author.ID }, new { @class = "btn btn-primary btn-sm" })
+				</td>
+			</tr>
+		}
+	</table>

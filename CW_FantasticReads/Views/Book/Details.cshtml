@@ -1,0 +1,59 @@
+﻿@using CW_FantasticReads.Models
+@model BookViewModel
+
+@{
+	ViewBag.Title = "Details";
+}
+
+<div class="form-horizontal">
+	<div class="form-group">
+		<label class="control-label col-md-2" for="">Image</label>
+		<div class="col-md-10">
+			<img src="@Url.Content(Model.ImagePath)" alt="Cover" width="200" />
+		</div>
+	</div>
+
+	<div class="form-group">
+		<label class="control-label col-md-2" for="Name">Name:</label>
+		<div class="col-md-2">
+			@Model.Name
+		</div>
+	</div>
+
+	<div class="form-group">
+		<label class="control-label col-md-2" for="AuthorID">Author:</label>
+		<div class="col-md-10">
+			@Model.Author.Name
+		</div>
+	</div>
+	<div class="form-group">
+		<label class="control-label col-md-2" for="SeriesID">Series:</label>
+		<div class="col-md-10">
+			@Model.Series.Name
+		</div>
+	</div>
+
+	<div class="form-group">
+		<label class="control-label col-md-2" for="GenreID">Genre:</label>
+		<div class="col-md-10">
+			@Model.Genre.Name
+		</div>
+	</div>
+
+	<div class="form-group">
+		<label class="control-label col-md-2" for="Price">Price:</label>
+		<div class="col-md-10">
+			@Model.Price
+		</div>
+	</div>
+
+	<div class="form-group">
+		<label class="control-label col-md-2" for="Pages">Pages:</label>
+		<div class="col-md-10">
+			@Model.Pages
+		</div>
+	</div>
+</div>
+<p>
+	@Html.ActionLink("Back", "Index","Home")
+</p>

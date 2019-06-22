@@ -1,0 +1,12 @@
+B:\University\YEAR 1\SEMESTER 2\Courseworks\Уеб програмиране с ASP.NET\CW_FantasticReads\DataAccess\bin\Debug\DataAccess.dll.config
+B:\University\YEAR 1\SEMESTER 2\Courseworks\Уеб програмиране с ASP.NET\CW_FantasticReads\DataAccess\bin\Debug\DataAccess.dll
+B:\University\YEAR 1\SEMESTER 2\Courseworks\Уеб програмиране с ASP.NET\CW_FantasticReads\DataAccess\bin\Debug\DataAccess.pdb
+B:\University\YEAR 1\SEMESTER 2\Courseworks\Уеб програмиране с ASP.NET\CW_FantasticReads\DataAccess\bin\Debug\EntityFramework.dll
+B:\University\YEAR 1\SEMESTER 2\Courseworks\Уеб програмиране с ASP.NET\CW_FantasticReads\DataAccess\bin\Debug\EntityFramework.SqlServer.dll
+B:\University\YEAR 1\SEMESTER 2\Courseworks\Уеб програмиране с ASP.NET\CW_FantasticReads\DataAccess\bin\Debug\EntityFramework.xml
+B:\University\YEAR 1\SEMESTER 2\Courseworks\Уеб програмиране с ASP.NET\CW_FantasticReads\DataAccess\bin\Debug\EntityFramework.SqlServer.xml
+B:\University\YEAR 1\SEMESTER 2\Courseworks\Уеб програмиране с ASP.NET\CW_FantasticReads\DataAccess\obj\Debug\DataAccess.csproj.CoreCompileInputs.cache
+B:\University\YEAR 1\SEMESTER 2\Courseworks\Уеб програмиране с ASP.NET\CW_FantasticReads\DataAccess\obj\Debug\DataAccess.csproj.CopyComplete
+B:\University\YEAR 1\SEMESTER 2\Courseworks\Уеб програмиране с ASP.NET\CW_FantasticReads\DataAccess\obj\Debug\DataAccess.dll
+B:\University\YEAR 1\SEMESTER 2\Courseworks\Уеб програмиране с ASP.NET\CW_FantasticReads\DataAccess\obj\Debug\DataAccess.pdb
+B:\University\YEAR 1\SEMESTER 2\Courseworks\Уеб програмиране с ASP.NET\CW_FantasticReads\DataAccess\obj\Debug\DataAccess.csprojAssemblyReference.cache

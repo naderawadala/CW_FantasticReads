@@ -1,0 +1,31 @@
+﻿@using CW_FantasticReads.Models
+@model List<GenreViewModel>
+	@{ 
+		ViewBag.Title = "Genres";
+	}
+
+<div class="table-actions">
+	@Html.ActionLink("Add New Genre","Create","Genre",null,new { @class="btn btn-primary btn-sm"})
+</div>
+<table class="table table-striped">
+	<thead>
+		<tr>
+			<th>ID:</th>
+			<th>Name:</th>
+		</tr>
+	</thead>
+	@foreach(GenreViewModel genre in Model)
+	{
+	<tr>
+		<td class="cell-small">@genre.ID</td>
+		<td>@genre.Name</td>
+		<td class="cell-small">
+			@Html.ActionLink("Edit", "Edit", "Genre", new { id = genre.ID }, new { @class = "btn btn-primary btn-sm" })
+		</td>
+		<td class="cell-small">
+			@Html.ActionLink("Delete", "Delete", "Genre", new { id = genre.ID }, new { @class = "btn btn-primary btn-sm" })
+		</td>
+
+	</tr>
+	}
+</table>

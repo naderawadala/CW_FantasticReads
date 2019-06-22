@@ -1,0 +1,6 @@
+B:\University\YEAR 1\SEMESTER 2\Courseworks\Уеб програмиране с ASP.NET\CW_FantasticReads\FantasticReadsDB\bin\Debug\FantasticReadsDB.dacpac
+B:\University\YEAR 1\SEMESTER 2\Courseworks\Уеб програмиране с ASP.NET\CW_FantasticReads\FantasticReadsDB\bin\Debug\FantasticReadsDB.dll
+B:\University\YEAR 1\SEMESTER 2\Courseworks\Уеб програмиране с ASP.NET\CW_FantasticReads\FantasticReadsDB\bin\Debug\FantasticReadsDB.pdb
+B:\University\YEAR 1\SEMESTER 2\Courseworks\Уеб програмиране с ASP.NET\CW_FantasticReads\FantasticReadsDB\obj\Debug\FantasticReadsDB.dll
+B:\University\YEAR 1\SEMESTER 2\Courseworks\Уеб програмиране с ASP.NET\CW_FantasticReads\FantasticReadsDB\obj\Debug\FantasticReadsDB.pdb
+B:\University\YEAR 1\SEMESTER 2\Courseworks\Уеб програмиране с ASP.NET\CW_FantasticReads\FantasticReadsDB\obj\Debug\FantasticReadsDB.sqlprojAssemblyReference.cache

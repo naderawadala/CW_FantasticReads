@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="400d91be6a994efa8219d735dce2c9c0" Name="Diagram1">
+        <EntityTypeShape EntityType="FantasticReadsModel.Author" Width="1.5" PointX="5.75" PointY="2.875" />
+        <EntityTypeShape EntityType="FantasticReadsModel.Book" Width="1.5" PointX="3.25" PointY="0.5" />
+        <EntityTypeShape EntityType="FantasticReadsModel.Genre" Width="1.5" PointX="1" PointY="0.625" />
+        <EntityTypeShape EntityType="FantasticReadsModel.Series" Width="1.5" PointX="1" PointY="2.625" />
+        <EntityTypeShape EntityType="FantasticReadsModel.User" Width="1.5" PointX="5.75" PointY="0.625" />
+        <AssociationConnector Association="FantasticReadsModel.FK_Book_Author" />
+        <AssociationConnector Association="FantasticReadsModel.FK_Book_Genre1" />
+        <AssociationConnector Association="FantasticReadsModel.FK_Book_Series" />
+        <EntityTypeShape EntityType="FantasticReadsModel.sysdiagram" Width="1.5" PointX="0.75" PointY="5.75" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

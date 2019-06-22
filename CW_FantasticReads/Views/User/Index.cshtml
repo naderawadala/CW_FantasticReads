@@ -1,0 +1,41 @@
+﻿@using CW_FantasticReads.Models
+@model List<UserViewModel>
+
+@{
+	ViewBag.Title = "Index";
+}
+@{
+	if (string.IsNullOrEmpty(ViewBag.ErrorMessage) == false)
+	{
+		<div>@ViewBag.ErrorMessage</div>
+	}
+	if (string.IsNullOrEmpty(ViewBag.Message) == false)
+	{
+		<div>@ViewBag.Message</div>
+	}
+}
+<table class="table table-striped">
+	<thead>
+		<tr>
+			<th>ID:</th>
+			<th>Username:</th>
+			<th>Is Admin:</th>
+		</tr>
+	</thead>
+	<tbody>
+		@foreach(UserViewModel user in Model)
+		{
+			<tr>
+				<td class="cell-small">@user.ID</td>
+				<td>@user.Username</td>
+				<td>@user.IsAdmin</td>
+				<td class="cell-small">
+					@if (!user.IsAdmin)
+					{
+						@Html.ActionLink("Delete", "Delete", "User", new { id = user.ID }, new { @class = "btn btn-primary btn-sm" })
+					}
+				</td>
+			</tr>
+		}
+	</tbody>
+</table>

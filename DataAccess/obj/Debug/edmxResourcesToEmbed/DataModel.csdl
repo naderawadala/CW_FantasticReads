@@ -1,0 +1,125 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="FantasticReadsModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityContainer Name="FantasticReads" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="Authors" EntityType="FantasticReadsModel.Author" />
+    <EntitySet Name="Books" EntityType="FantasticReadsModel.Book" />
+    <EntitySet Name="Genres" EntityType="FantasticReadsModel.Genre" />
+    <EntitySet Name="Series" EntityType="FantasticReadsModel.Series" />
+    <EntitySet Name="Users" EntityType="FantasticReadsModel.User" />
+    <AssociationSet Name="FK_Book_Author" Association="FantasticReadsModel.FK_Book_Author">
+      <End Role="Author" EntitySet="Authors" />
+      <End Role="Book" EntitySet="Books" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Book_Genre1" Association="FantasticReadsModel.FK_Book_Genre1">
+      <End Role="Genre" EntitySet="Genres" />
+      <End Role="Book" EntitySet="Books" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Book_Series" Association="FantasticReadsModel.FK_Book_Series">
+      <End Role="Series" EntitySet="Series" />
+      <End Role="Book" EntitySet="Books" />
+    </AssociationSet>
+    <EntitySet Name="sysdiagrams" EntityType="FantasticReadsModel.sysdiagram" />
+  </EntityContainer>
+  <EntityType Name="Author">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Name" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="Books" Relationship="FantasticReadsModel.FK_Book_Author" FromRole="Author" ToRole="Book" />
+  </EntityType>
+  <EntityType Name="Book">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Name" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Price" Type="Double" Nullable="false" />
+    <Property Name="Pages" Type="Int32" Nullable="false" />
+    <Property Name="AuthorID" Type="Int32" Nullable="false" />
+    <Property Name="SeriesID" Type="Int32" />
+    <Property Name="GenreID" Type="Int32" Nullable="false" />
+    <NavigationProperty Name="Author" Relationship="FantasticReadsModel.FK_Book_Author" FromRole="Book" ToRole="Author" />
+    <NavigationProperty Name="Genre" Relationship="FantasticReadsModel.FK_Book_Genre1" FromRole="Book" ToRole="Genre" />
+    <NavigationProperty Name="Series" Relationship="FantasticReadsModel.FK_Book_Series" FromRole="Book" ToRole="Series" />
+    <Property Name="ImageName" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="Genre">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Name" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="Books" Relationship="FantasticReadsModel.FK_Book_Genre1" FromRole="Genre" ToRole="Book" />
+  </EntityType>
+  <EntityType Name="Series">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Name" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="Books" Relationship="FantasticReadsModel.FK_Book_Series" FromRole="Series" ToRole="Book" />
+  </EntityType>
+  <EntityType Name="User">
+    <Key>
+      <PropertyRef Name="UserID" />
+    </Key>
+    <Property Name="UserID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Username" Type="String" Nullable="false" MaxLength="25" FixedLength="false" Unicode="true" />
+    <Property Name="IsAdmin" Type="Boolean" Nullable="false" />
+    <Property Name="PasswordHash" Type="String" Nullable="false" MaxLength="300" FixedLength="false" Unicode="true" />
+    <Property Name="PasswordSalt" Type="String" Nullable="false" MaxLength="300" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <Association Name="FK_Book_Author">
+    <End Type="FantasticReadsModel.Author" Role="Author" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Type="FantasticReadsModel.Book" Role="Book" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Author">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="Book">
+        <PropertyRef Name="AuthorID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Book_Genre1">
+    <End Type="FantasticReadsModel.Genre" Role="Genre" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Type="FantasticReadsModel.Book" Role="Book" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Genre">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="Book">
+        <PropertyRef Name="GenreID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Book_Series">
+    <End Type="FantasticReadsModel.Series" Role="Series" Multiplicity="0..1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Type="FantasticReadsModel.Book" Role="Book" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Series">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="Book">
+        <PropertyRef Name="SeriesID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityType Name="sysdiagram">
+    <Key>
+      <PropertyRef Name="diagram_id" />
+    </Key>
+    <Property Name="name" Type="String" Nullable="false" MaxLength="128" FixedLength="false" Unicode="true" />
+    <Property Name="principal_id" Type="Int32" Nullable="false" />
+    <Property Name="diagram_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="version" Type="Int32" />
+    <Property Name="definition" Type="Binary" MaxLength="Max" FixedLength="false" />
+  </EntityType>
+</Schema>

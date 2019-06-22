@@ -1,0 +1,29 @@
+﻿@using CW_FantasticReads.Models
+@using CW_FantasticReads.Helpers
+@model HomeViewModel
+
+@{
+	ViewBag.Title = "Index";
+	
+}
+
+<div class="container">
+	<div class="row">
+		@foreach (HomeBookViewModel book in Model.bookList)
+		{
+		<div class="col-md-4 col-sm-12">
+			@if (LoginSession.Current.IsAuthenticated)
+			{
+				<a href="~/Book/Details/@book.ID">
+					<img src="@Url.Content(book.ImagePath)" alt="Cover" class="img-container-cover" />
+				</a>
+			}
+			else
+			{
+				<img src="@Url.Content(book.ImagePath)" alt="Cover" class="img-container-cover" />
+			}
+			<p class="img-container-title">@book.Name</p>
+		</div>
+	}
+		</div>
+	</div>
